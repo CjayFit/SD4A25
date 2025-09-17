@@ -1,0 +1,23 @@
+meta {
+  name: [200] - Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/sessions
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "credential":"mymelody@kitty.com",
+      "password":"123456"
+  } 
+  // là c une route pour se log avec email et mdp qu'on a créé dans create account , ça fait une verif en BD par le server (vs code)
+  
+  // si le email ou le mdp n'est pas bon, ça ne va pas marcher
+  
+  // si un des 2 n'existe pas, ça ne va pas marcher
+}
